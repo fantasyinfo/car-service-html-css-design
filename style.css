@@ -1,15 +1,48 @@
 :root{
     --primary-color: #E9E743;
+    --white-bg-color:#E5E5E5;
     --black-color:#000000;
+    --light-black-color:#010101;
     --white-color:#ffffff;
 }
+
+/*
+***********************
+***** FONTS       *****
+***********************
+*/ 
 
 @font-face{
     font-family: 'Montserrat-Black';
     src:url('./fonts/Montserrat-Black.ttf');
 }
+@font-face{
+    font-family: 'Montserrat-Bold';
+    src:url('./fonts/Montserrat-Bold.ttf');
+}
+@font-face{
+    font-family: 'Montserrat-ExtraBold';
+    src:url('./fonts/Montserrat-ExtraBold.ttf');
+}
+@font-face{
+    font-family: 'Montserrat-Light';
+    src:url('./fonts/Montserrat-Light.ttf');
+}
+@font-face{
+    font-family: 'Montserrat-Medium';
+    src:url('./fonts/Montserrat-Medium.ttf');
+}
+@font-face{
+    font-family: 'Montserrat-Regular';
+    src:url('./fonts/Montserrat-Regular.ttf');
+}
 
 
+/*
+***********************
+***** GENERAL     *****
+***********************
+*/
 
 *{
     margin:0;
@@ -18,8 +51,80 @@
 }
 html {
     font-size:62.5%;
+    font-family: 'Montserrat-Regular' , sans-serif;
+    background-color: var(--white-bg-color);
 }
 
+
 .container{
-    max-width: 144rem;
+    max-width: 120rem;
+    margin:0 auto;
+}
+
+.flex{
+    display:flex;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-space-between{
+    justify-content: space-between;
+}
+
+.align-items-center{
+    align-items:center;
+}
+
+
+.gap1{
+    gap: 1rem;
+}
+.row-gap3-5{
+    gap: 3.5rem;
+}
+
+
+/*
+***********************
+***** Header      *****
+***********************
+*/
+
+header{
+    background-color:var(--white-color);
+}
+
+header .logo {
+    max-width: 36.6rem;
+    height:8.1rem;
+    object-fit: contain;
+}
+
+header ul{
+    list-style-type:none;
+}
+
+
+header ul li a:link, header ul li a:hover{
+    font-size:1.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    color:var(--black-color);
+    transition:all 0.3ms;
+}
+header ul li a:active, header ul li a:visited{
+    color:var(--light-black-color);
+}
+
+
+header ul li:last-child{
+    border:1px solid var(--black-color);
+    padding:1.8rem 4.2rem;
+    cursor:pointer;
+}
+
+.secondary-header {
+    background-color:var(--primary-color);
+    height: 8.8rem;
 }
